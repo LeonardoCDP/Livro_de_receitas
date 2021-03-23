@@ -17,7 +17,7 @@ def apiOverview(request):
             '/recipe-fast-and-simple/<str:title>/',
         'Create': '/recipe-create/',
         'Update': '/recipe-update/<str:uuid4>/',
-        'Delete': '/recipe-delete/<str:uuid4>/',
+        'Delete': '/recipe-delete/<str:uuid4',
     }
 
     return Response(api_urls)

@@ -14,7 +14,6 @@ class RecipeTestCase(APITestCase):
         "title": "Gelatina",
         "recipe": "Pegue uma gelatina\r\nFerva 250ml de agua quente\r\nAdicione",
         "preparation_time": "5 minutos",
-        "simple_recipe": True,
         "fast_recipe": True}
         response = self.client.post('/recipe-create/', data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
