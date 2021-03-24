@@ -4,6 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 
+
 @api_view(['GET'])
 def apiOverview(request):
     '''EndPoints list'''
@@ -14,10 +15,10 @@ def apiOverview(request):
         'Detail View Title': '/recipe-detail-title/<str:title>/',
         'Detail View Simple And Fast Recipe': '/recipe-fast-and-simple/',
         'Detail View Simple And Fast Recipe And Title':
-            '/recipe-fast-and-simple/<str:title>/',
+            '/recipe-fast-and-simple-and-title/<str:title>/',
         'Create': '/recipe-create/',
         'Update': '/recipe-update/<str:uuid4>/',
-        'Delete': '/recipe-delete/<str:uuid4',
+        'Delete': '/recipe-delete/<str:uuid4>/',
     }
 
     return Response(api_urls)
